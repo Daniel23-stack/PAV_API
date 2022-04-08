@@ -22,23 +22,6 @@ const userSchema = new mongoose.Schema({
         default: false,
     },
 
-    apartment: {
-        type: String,
-        default: ''
-    },
-    zip :{
-        type: String,
-        default: ''
-    },
-    city: {
-        type: String,
-        default: ''
-    },
-    country: {
-        type: String,
-        default: ''
-    }
-
 });
 
 userSchema.virtual('id').get(function () {
