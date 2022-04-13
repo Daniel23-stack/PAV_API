@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const productSchema = mongoose.Schema({
+const answers = mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -57,13 +57,13 @@ const productSchema = mongoose.Schema({
     },
 })
 
-productSchema.virtual('id').get(function () {
+answers.virtual('id').get(function () {
     return this._id.toHexString();
 });
 
-productSchema.set('toJSON', {
+answers.set('toJSON', {
     virtuals: true,
 });
 
 
-exports.Product = mongoose.model('Product', productSchema);
+exports.Product = mongoose.model('Product', answers);
